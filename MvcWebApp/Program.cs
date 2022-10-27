@@ -1,7 +1,11 @@
+using MvcWebApp.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IAuctionRepo, AuctionRepo>();
 
 var app = builder.Build();
 
