@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\evillegas\Documents\Projects\signalr-tutorial\MvcWebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/evillegas/Documents/Projects/signalr-tutorial/MvcWebApp/Views/Auction/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGlvblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/evillegas/Documents/Projects/signalr-tutorial/MvcWebApp/Views/Auction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/evillegas/Documents/Projects/signalr-tutorial/MvcWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
