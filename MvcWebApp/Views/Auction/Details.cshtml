@@ -9,12 +9,6 @@
 <div>
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.StartDate)
         </dt>
         <dd class = "col-sm-10">
@@ -27,4 +21,29 @@
             @Html.DisplayFor(model => model.EndDate)
         </dd>
     </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Current Bid</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AuctionItem item in Model.AuctionItems) {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ItemName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CurrentBid)</td>
+                        <td>
+                            <input type="number" name="bidAmount" id="@item.Id-bidInput">
+                            <button class="btn btn-primary" onclick="submitBid(@item.Id)">Bid</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

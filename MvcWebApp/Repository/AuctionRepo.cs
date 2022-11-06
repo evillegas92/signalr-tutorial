@@ -11,6 +11,14 @@ namespace MvcWebApp.Repository
             InitializeAuctionsFromMemory();
         }
 
+        public void BidOnItem(int auctionItemId, decimal bidAmount)
+        {
+            AuctionItem? item = FindById(auctionItemId);
+            if (item == null)
+                return;
+            item.CurrentBid = bidAmount;            
+        }
+
         public IEnumerable<Auction> GetAllAuctions()
         {
             return this.auctions;
@@ -45,6 +53,19 @@ namespace MvcWebApp.Repository
                 }
             });
             this.auctions.Add(auction);
+        }
+
+        private AuctionItem? FindById(int auctionItemId)
+        {
+            foreach (Auction auction in this.auctions)
+            {
+                foreach (AuctionItem auctionItem in auction.AuctionItems)
+                {
+                    if (auctionItem.Id == auctionItemId)
+                        return auctionItem;
+                }
+            }
+            return null;
         }
     }
 }
